@@ -2,7 +2,6 @@ package co.com.choucair.utest.tasks;
 
 import co.com.choucair.utest.model.UtestData;
 import co.com.choucair.utest.userinterface.MapFormOne;
-import co.com.choucair.utest.util.MetTime;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -35,13 +34,12 @@ public class CompleteFormOne implements Task {
                 Enter.theValue(utestData.get(0).getFirstName()).into(MapFormOne.FIRST_NAME),
                 Enter.theValue(utestData.get(0).getLastName()).into(MapFormOne.lAST_NAME),
                 Enter.theValue(utestData.get(0).getEmail()).into(MapFormOne.EMAIL),
-                SelectFromOptions.byValue("number:3").from(MapFormOne.MONTH),
-                SelectFromOptions.byValue("number:23").from(MapFormOne.DAY),
-                SelectFromOptions.byValue("number:1992").from(MapFormOne.YEAR)
+                Click.on(MapFormOne.MONTH),
+                Click.on(MapFormOne.DAY),
+                Click.on(MapFormOne.YEAR),
+                Click.on(MapFormOne.NEXT_LOCATION)
                 );
 
-        MetTime.time(2000);
-                actor.attemptsTo(Click.on(MapFormOne.NEXT_LOCATION));
 
 
     }

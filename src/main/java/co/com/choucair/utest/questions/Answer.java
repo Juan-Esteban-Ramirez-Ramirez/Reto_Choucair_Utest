@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
 
-public class Answer implements Question<String> {
+public class Answer implements Question<Boolean> {
 
     private List<UtestData> utestData;
 
@@ -22,7 +22,18 @@ public class Answer implements Question<String> {
 
 
     @Override
-    public String answeredBy(Actor actor) {
-        return Text.of(MapCreate.USER_OK).viewedBy(actor).asString();
+    public Boolean answeredBy(Actor actor) {
+        boolean resultado;
+
+        String usuarioNew = Text.of(MapCreate.USER_OK).viewedBy(actor).asString();
+
+        if (utestData.get(0).getConfirm().equals(usuarioNew)){
+            resultado = true;
+        }else {
+            resultado = false;
+        }
+
+        return resultado;
+
     }
 }

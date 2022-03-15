@@ -2,7 +2,6 @@ package co.com.choucair.utest.tasks;
 
 import co.com.choucair.utest.model.UtestData;
 import co.com.choucair.utest.userinterface.MapFormTwo;
-import co.com.choucair.utest.util.MetTime;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -39,7 +38,7 @@ public class CompleteFormTwo implements Task {
                 Enter.theValue(utestData.get(0).getPostal()).into(MapFormTwo.POSTAL),
                 Click.on(MapFormTwo.COUNTRY_CLIC),
                 Click.on(MapFormTwo.COUNTRY));
-        MetTime.time(2000);
+
         actor.attemptsTo(Click.on(MapFormTwo.NEXT_DEVICES));
 
 

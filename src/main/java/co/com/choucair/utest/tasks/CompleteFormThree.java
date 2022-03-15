@@ -1,7 +1,6 @@
 package co.com.choucair.utest.tasks;
 
 import co.com.choucair.utest.userinterface.MapFormThree;
-import co.com.choucair.utest.util.MetTime;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -31,7 +30,7 @@ public class CompleteFormThree implements Task {
                 Click.on(MapFormThree.MODEL),
                 Click.on(MapFormThree.SYSTEM_CLIC),
                 Click.on(MapFormThree.SYSTEM));
-        MetTime.time(2000);
+
         actor.attemptsTo(Click.on(MapFormThree.NEXT_LAST_STEP));
 
     }

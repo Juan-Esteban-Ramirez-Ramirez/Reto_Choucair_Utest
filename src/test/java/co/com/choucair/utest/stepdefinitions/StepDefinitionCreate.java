@@ -68,7 +68,7 @@ public class StepDefinitionCreate {
     @Then("^verify that the user was created successfully$")
     public void verifyThatTheUserWasCreatedSuccessfully(List<UtestData> utestData)  {
 
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.verify(utestData), Matchers.equalTo(utestData.get(0).getConfirm())));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.verify(utestData)));
 
     }
 }

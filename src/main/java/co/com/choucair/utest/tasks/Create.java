@@ -3,10 +3,6 @@ package co.com.choucair.utest.tasks;
 
 import co.com.choucair.utest.model.UtestData;
 import co.com.choucair.utest.userinterface.MapCreate;
-import co.com.choucair.utest.userinterface.MapFormOne;
-import co.com.choucair.utest.userinterface.MapFormThree;
-import co.com.choucair.utest.userinterface.MapFormTwo;
-import co.com.choucair.utest.util.MetTime;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -38,7 +34,7 @@ public class Create implements Task {
                 Click.on(MapCreate.CHECK_ONE),
                 Click.on(MapCreate.CHECK_TWO));
 
-        MetTime.time(4000);
+
 
 
     }
