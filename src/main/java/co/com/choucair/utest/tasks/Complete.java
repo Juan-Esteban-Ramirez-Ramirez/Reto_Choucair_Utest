@@ -32,9 +32,10 @@ public class Complete implements Task {
                 Click.on(MODEL_CLIC),
                 Click.on(MODEL),
                 Click.on(SYSTEM_CLIC),
-                Click.on(SYSTEM));
+                Click.on(SYSTEM),
+                Click.on(NEXT_LAST_STEP));
 
-        actor.attemptsTo(Click.on(NEXT_LAST_STEP));
+
 
     }
 }

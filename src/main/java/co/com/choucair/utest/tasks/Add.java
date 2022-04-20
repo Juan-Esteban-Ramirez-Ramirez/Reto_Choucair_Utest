@@ -40,9 +40,8 @@ public class Add implements Task {
                 Hit.the(Keys.ENTER).into(CITY),
                 Enter.theValue(utestData.get(0).getPostal()).into(POSTAL),
                 Click.on(COUNTRY_CLIC),
-                Click.on(COUNTRY));
-
-        actor.attemptsTo(Click.on(NEXT_DEVICES));
+                Click.on(COUNTRY),
+                Click.on(NEXT_DEVICES));
 
 
 
